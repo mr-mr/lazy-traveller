@@ -1,0 +1,29 @@
+{
+  "name": "thelazytraveller",
+  "version": "0.0.1",
+  "description": "A stream of just the travel information I need, nothing else",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr-mr/lazy-traveller.git"
+  },
+  "keywords": [
+    "lazy",
+    "traveller",
+    "fat",
+    "slow"
+  ],
+  "author": "Chris Clarke <mrmr.mail@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr-mr/lazy-traveller/issues"
+  },
+  "homepage": "https://github.com/mr-mr/lazy-traveller#readme"
+}
