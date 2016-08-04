@@ -1,6 +1,6 @@
 {
   "name": "thelazytraveller",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A stream of just the travel information I need, nothing else",
   "main": "index.js",
   "directories": {
