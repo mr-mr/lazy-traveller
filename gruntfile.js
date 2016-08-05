@@ -50,6 +50,18 @@ module.exports = function(grunt) {
                 }
             }
         },
+    'ftp-deploy' : {
+      build: {
+        auth: {
+          host: 'mr-mr.co.uk',
+          port: 21,
+          authKey: 'key1'
+        },
+        src: '../lazy-traveller',
+        dest: '/lazytraveller',
+        exclusions: ['.DS_Store', 'tmp', '.git']
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-notify');
@@ -60,6 +72,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-ftp-deploy');
+
 
   grunt.registerTask('default',['sass', 'connect', 'watch', 'cssmin', 'uglify']);
 }
