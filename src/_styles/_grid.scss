@@ -1,0 +1,29 @@
+#container {
+  margin: 0 auto;
+  width: 900px; }
+
+#events {
+  color: aqua; }
+
+.block {
+  display: inline-block;
+  padding-right: 10px;
+  width: 30%; }
+
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+
+@import 'mq';
+
+.foo {
+    @include mq($from: mobile, $until: tablet) {
+        background: red;
+    }
+    @include mq($from: tablet) {
+        background: green;
+    }
+}
