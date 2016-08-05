@@ -32,12 +32,14 @@ loadJSON("https://api.tfl.gov.uk/Line/Mode/national-rail/Status?detail=False&app
   document.getElementsByClassName('thameslink')[0].innerHTML = train[22].name + ' - ' + train[22].lineStatuses[0].statusSeverityDescription;
 })
 
-loadJSON("https://api.tfl.gov.uk/StopPoint/490009485R/arrivals?detail=False&app_id=2a97af33&app_key=9850b4c32b20ab40726bc8ef92d9573b", function(bus){
+loadJSON("https://api.tfl.gov.uk/StopPoint/490013818H/arrivals?detail=False&app_id=2a97af33&app_key=9850b4c32b20ab40726bc8ef92d9573b", function(bus){
   bus.forEach( function(buses){
     var div = document.createElement('div');
-    div.innerHTML = buses.operationType + ' - ' + buses.timeToStation;
-    // div.classList.add(buses.id);
+    div.innerHTML = buses.lineName + ' - ' + buses.timeToStation;
+    div.classList.add(buses.modeName);
     document.body.appendChild(div);
   })
 })
 });
+
+//https://api.tfl.gov.uk/line/51/arrivals
