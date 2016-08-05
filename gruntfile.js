@@ -8,14 +8,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    // copy: {
-    //   build: {
-    //     cwd: 'src',
-    //     src: [ '**' ],
-    //     dest: 'build',
-    //     expand: true
-    //   },
-    // },
     connect: {
       server: {
         options: {

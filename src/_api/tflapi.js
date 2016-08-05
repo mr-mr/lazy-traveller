@@ -1,5 +1,4 @@
-function loadJSON(path, success, error)
-{
+function loadJSON(path, success, error){
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function()
     {
@@ -17,6 +16,13 @@ function loadJSON(path, success, error)
     xhr.send();
 }
 
-alert("hello");
-// loadJSON("", function(data) {
-// }
+loadJSON("https://api.tfl.gov.uk/Line/Mode/tube,overground,dlr/Status?detail=False&app_id=2a97af33&app_key=9850b4c32b20ab40726bc8ef92d9573b", function(data) {
+  data.forEach( function(tube){
+    // window.data = data;
+    // var line = document.getElementsByClassName('lines')[0];
+    var div = document.createElement('div');
+    div.innerHTML = tube.name + ' - ' + tube.lineStatuses[0].statusSeverityDescription;
+    div.classList.add(tube.id);
+    document.body.appendChild(div);
+  });
+});
