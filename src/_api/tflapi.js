@@ -32,11 +32,23 @@ loadJSON("https://api.tfl.gov.uk/Line/Mode/national-rail/Status?detail=False&app
   document.getElementsByClassName('thameslink')[0].innerHTML = train[22].name + ' - ' + train[22].lineStatuses[0].statusSeverityDescription;
 })
 
-loadJSON("https://api.tfl.gov.uk/StopPoint/490013818H/arrivals?detail=False&app_id=2a97af33&app_key=9850b4c32b20ab40726bc8ef92d9573b", function(bus){
-  bus.forEach( function(buses){
+loadJSON("https://api.tfl.gov.uk/StopPoint/490013818H/arrivals?detail=False&app_id=2a97af33&app_key=9850b4c32b20ab40726bc8ef92d9573b", function(buses){
+  var sortBus = buses.sort( function(a,b){
+    return a.timeToStation - b.timeToStation;
+  });
+
+  console.log(sortBus);
+
+  sortBus.forEach( function(bus){
     var div = document.createElement('div');
-    div.innerHTML = buses.lineName + ' - ' + buses.timeToStation;
-    div.classList.add(buses.modeName);
+    var busName = bus.lineName;
+    var busTime = Math.floor(bus.timeToStation / 60);
+    if(busTime < 2){
+        busTime = "Due";
+    };
+
+    div.innerHTML = busName + ' - ' + busTime;
+    div.classList.add(bus.modeName);
     document.body.appendChild(div);
   })
 })
