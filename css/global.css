@@ -13,6 +13,12 @@ h4 {
   background-color: lime;
   font-family: Helvetica, sans-serif; }
 
+.tick {
+  width: 15px;
+  height: 15px;
+  border: none;
+  float: right; }
+
 .bakerloo {
   background-color: #996633;
   color: white;
@@ -60,7 +66,7 @@ h4 {
 
 .victoria {
   background-color: #0099CC;
-  color: #333;
+  color: white;
   padding: 10px; }
 
 .waterloo-city {
@@ -81,12 +87,16 @@ h4 {
 .thameslink {
   background-color: #40215B;
   color: white;
-  padding: 10px;
-  margin-bottom: 10px; }
+  padding: 10px; }
+
+.southeastern {
+  background-color: #63C000;
+  color: white;
+  padding: 10px; }
 
 .bus {
-  background-color: #000;
-  color: red;
+  background-color: #333;
+  color: #fb0;
   padding: 10px; }
 
 h1, h2, p {
@@ -102,20 +112,6 @@ h2 {
 
 .title {
   margin-top: 15px; }
-
-img {
-  width: 80%;
-  padding: 5%;
-  animation-name: fader;
-  animation-duration: 2s;
-  border: 1px solid red;
-  border-radius: 50%; }
-
-@keyframes fader {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 100; } }
 
 #container {
   margin: 0 auto;

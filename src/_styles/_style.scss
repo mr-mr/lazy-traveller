@@ -15,6 +15,13 @@ h4{
   font-family: $font-stack;
 }
 
+.tick {
+  width:15px;
+  height:15px;
+  border: none;
+  float:right;
+}
+
 .bakerloo {
   background-color: #996633;
   color:white;
@@ -71,7 +78,7 @@ h4{
 
 .victoria {
   background-color: #0099CC;
-  color:#333;
+  color:white;
   padding:10px;
 }
 
@@ -97,12 +104,17 @@ h4{
   background-color: #40215B;
   color:white;
   padding:10px;
-  margin-bottom: 10px;
+}
+
+.southeastern {
+  background-color: #63C000;
+  color:white;
+  padding:10px;
 }
 
 .bus {
-  background-color: #000;
-  color:red;
+  background-color: #333;
+  color:#fb0;
   padding:10px;
 }
 
@@ -119,17 +131,3 @@ h2 {
 
 .title {
   margin-top: 15px; }
-
-img {
-  width: 80%;
-  padding: 5%;
-  animation-name: fader;
-  animation-duration: 2s;
-  border: $image-borders;
-  border-radius: $radius; }
-
-@keyframes fader {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 100; } }
