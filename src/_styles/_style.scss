@@ -8,6 +8,7 @@ body {
   background-color: $primary-color;
   margin: 0 auto;
   font-family: $font-stack;
+  font-size: 1.5em;
 }
 
 h4{
@@ -20,8 +21,59 @@ h4{
   height:15px;
   border: none;
   float:right;
+  padding-right: 10px;
 }
 
+.faded {
+  opacity: 0.2;
+}
+
+.circle {
+  background-color: #FFCC00;
+  color:#333;
+  padding:10px;
+}
+
+.victoria {
+  background-color: #0099CC;
+  color:white;
+  padding:10px;
+}
+
+.thameslink {
+  background-color: #40215B;
+  color:white;
+  padding:10px;
+}
+
+.southeastern {
+  background-color: #63C000;
+  color:white;
+  padding:10px;
+}
+
+.bus {
+  background-color: #333;
+  color:#fb0;
+  padding:10px;
+}
+
+h1, h2, p {
+  padding: 0;
+  margin: 0; }
+
+h1 {
+  font-weight: 400;
+  font-family: $font-stack;}
+
+h2 {
+  font-weight: 200; }
+
+.title {
+  margin-top: 15px; }
+
+
+/*
 .bakerloo {
   background-color: #996633;
   color:white;
@@ -34,11 +86,24 @@ h4{
   padding:10px;
 }
 
-.circle {
-  background-color: #FFCC00;
+.waterloo-city {
+  background-color: #66CCCC;
   color:#333;
   padding:10px;
 }
+
+.london-overground {
+  background-color: #ff6600;
+  color:white;
+  padding:10px;
+}
+
+.dlr {
+  background-color: #009999;
+  color:white;
+  padding:10px;
+}
+
 
 .district {
   background-color: #006633;
@@ -75,59 +140,4 @@ h4{
   color:white;
   padding:10px;
 }
-
-.victoria {
-  background-color: #0099CC;
-  color:white;
-  padding:10px;
-}
-
-.waterloo-city {
-  background-color: #66CCCC;
-  color:#333;
-  padding:10px;
-}
-
-.london-overground {
-  background-color: #ff6600;
-  color:white;
-  padding:10px;
-}
-
-.dlr {
-  background-color: #009999;
-  color:white;
-  padding:10px;
-}
-
-.thameslink {
-  background-color: #40215B;
-  color:white;
-  padding:10px;
-}
-
-.southeastern {
-  background-color: #63C000;
-  color:white;
-  padding:10px;
-}
-
-.bus {
-  background-color: #333;
-  color:#fb0;
-  padding:10px;
-}
-
-h1, h2, p {
-  padding: 0;
-  margin: 0; }
-
-h1 {
-  font-weight: 400;
-  font-family: $font-stack;}
-
-h2 {
-  font-weight: 200; }
-
-.title {
-  margin-top: 15px; }
+*/

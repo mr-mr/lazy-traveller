@@ -72,8 +72,10 @@ loadJSON("https://api.tfl.gov.uk/StopPoint/490013818H/arrivals?detail=False&app_
     var busName = bus.lineName;
     var busTime = Math.floor(bus.timeToStation / 60);
     if(busTime < 1){
-        busTime = "Due";
-    };
+        busTime = "Due" + "<i class='fa fa-bus tick'></i>";
+    }else{
+      busTime = busTime + "<i class='fa fa-bus tick faded'></i>";
+    }
     document.getElementsByClassName('headline').innerHTML = "Buses";
     div.innerHTML = busName + ' - ' + busTime;
     div.classList.add(bus.modeName);
